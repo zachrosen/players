@@ -1,0 +1,41 @@
+link(rel="stylesheet" href="/client/app/players/create/create.css")
+
+h1.hcenter Create Player
+form.well.container#createForm(ng-submit="vm.create()")
+  input.form-control(ng-model="vm.player.firstName" placeholder="First Name") 
+  label First Name
+  br
+  input.form-control(ng-model="vm.player.lastName" placeholder="Last Name") 
+  label Last Name
+  br
+  input.form-control(ng-model="vm.player.age" placeholder="Age") 
+  label Age
+  br
+  input.form-control(ng-model="vm.player.sport" placeholder="Sport") 
+  label Sport
+  br
+  input.form-control(ng-model="vm.player.position" placeholder="Position") 
+  label Position
+  br
+  input.form-control(ng-model="vm.player.height" placeholder="Height") 
+  label Height
+  br
+  input.form-control(ng-model="vm.player.weight" placeholder="Weight") 
+  label Weight
+  br
+  input.form-control(ng-model="vm.player.number" placeholder="Number") 
+  label Number
+  br
+  input.form-control(ng-model="vm.player.image" placeholder="Image") 
+  label Image
+  br
+  input.form-control(ng-model="vm.player.teamName" placeholder="Team Name") 
+  label Team Name
+  br
+  input.form-control(ng-model="vm.player.college" placeholder="College") 
+  label College
+  br
+  input.form-control(ng-model="vm.player.nationality" placeholder="Nationality") 
+  label Nationality
+  br
+  button.btn.btn-success Submit

@@ -1,0 +1,68 @@
+h1.hcenter.well.container(style="border: 3px solid white; border-radius: 15%; max-width: 300px") Player Details
+
+ul.hcenter.well.well-small.container(style="list-style: none; border: 3px solid white; border-radius: 15%; max-width: 300px" ng-show="!vm.isEditing") 
+  img(ng-src="{{vm.player.image}}", style="height:120px; width: 120px")
+  li Name: {{vm.player.firstName}} {{vm.player.lastName}}
+  li Age: {{vm.player.age}}
+  li Sport: {{vm.player.sport}}
+  li Position: {{vm.player.position}}
+  li Height: {{vm.player.height}}"
+  li Weight: {{vm.player.weight}}lbs
+  li Number: {{vm.player.number}}
+  li Team: {{vm.player.teamName}}
+  li College: {{vm.player.college}}
+  li Nationality: {{vm.player.nationality}}
+form.well.container(ng-show="vm.isEditing" ng-submit="vm.update()" style="border: 3px solid white; border-radius: 15%; max-width: 300px")
+  label First Name
+  input.form-control(type="string" ng-model="vm.updatePlayer.firstName" placeholder="First Name" style="width: 120px") 
+  br
+  label Last Name
+  input.form-control(type="string" ng-model="vm.updatePlayer.lastName" placeholder="Last Name" style="width: 120px") 
+  br
+  label Age
+  input.form-control(type="number" ng-model="vm.updatePlayer.age" placeholder="Age" style="width: 120px") 
+  br
+  label Sport
+  //input.form-control(ng-model="vm.updatePlayer.sport" placeholder="Sport" style="width: 120px")
+  select.form-control(type="string" ng-model="vm.updatePlayer.sport" style="width: 120px")
+    option(value="Soccer") Soccer
+    option(value="Basketball") Basketball
+    option(value="Football") Football
+    option(value="Hockey") Hockey
+    option(value="Baseball") Baseball
+    option(value="Tennis") Tennis
+  br
+  label Position
+  input.form-control(type="string" ng-model="vm.updatePlayer.position" placeholder="Position" style="width: 120px") 
+  br
+  label Height
+  input.form-control(type="number" ng-model="vm.updatePlayer.height" placeholder="Height" style="width: 120px") 
+  br
+  label Weight
+  input.form-control(type="number" ng-model="vm.updatePlayer.weight" placeholder="Weight" style="width: 120px") 
+  br
+  label Number
+  input.form-control(type="number" ng-model="vm.updatePlayer.number" placeholder="Number" style="width: 120px") 
+  br
+  label Image
+  input.form-control(type="string" ng-model="vm.updatePlayer.image" placeholder="Image" style="width: 500px") 
+  br
+  label Team Name
+  input.form-control(type="string" ng-model="vm.updatePlayer.teamName" placeholder="Team Name" style="width: 120px") 
+  br
+  label College
+  input.form-control(type="string" ng-model="vm.updatePlayer.college" placeholder="College" style="width: 120px") 
+  br
+  label Nationality
+  input.form-control(type="string" ng-model="vm.updatePlayer.nationality" placeholder="Nationality" style="width: 120px") 
+  br
+  button.btn.btn-danger(ng-click="vm.isEditing = false;" type="button" style="margin-right: 5px") Go Back
+  button.btn.btn-success(ng.click="") Submit
+  
+  
+  
+  
+  
+div.hcenter.well.container(ng-show="!vm.isEditing" style=" border: 3px solid white; border-radius: 15%; max-width: 300px")
+  button.btn.btn-danger(ng-click="vm.remove()" style="margin-right: 5px; border: 3px solid white") Delete
+  button.btn.btn-info(ng-click="vm.startEditing()" style="border: 3px solid white") Edit
